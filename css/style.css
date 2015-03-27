@@ -13,6 +13,50 @@ body{
 	overflow: hidden;
 }
 
+div.photos-background{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: fixed;
+	background-image: url(../img/photos/webdevelopment.jpg);
+	transition: background-image 1s;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+
+}
+
+div.colors-background{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	overflow: hidden;
+	opacity: 0.5;
+	transition: all 1s;
+
+}
+
+	div.colors-background.blue{
+		background-color: #90CAF9;
+	}
+
+	div.colors-background.green{
+		background-color: #A5D6A7;
+	}
+
+	div.colors-background.red{
+		background-color: #EF9A9A;
+	}
+
+	div.colors-background.yellow{
+		background-color: #FFF59D;
+	}
+
+	div.colors-background.grey{
+		background-color: #EEEEEE;
+	}
+
 header{
 	
 }

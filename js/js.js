@@ -1,8 +1,16 @@
+var Photos_Colors = [{color:"blue", photo: "img/photos/webdevelopment.jpg"}, {color:"green", photo: "img/photos/study.jpg"}, {color:"red", photo: "img/photos/webdevelopment.jpg"}, {color:"yellow", photo: "img/photos/projects.jpg"}, {color:"grey", photo: "..."}];
+
 function next(){
 	var curr = $("section.body.current");
 	var indx = curr.index();
 	//var indxplus = indx++;
 	if($("section.body").size()> indx+1){
+		$("div.colors-background").removeClass("blue green red yellow grey");
+		$("div.colors-background").addClass(Photos_Colors[indx+1].color);
+
+		$("div.photos-background").css("background-image", "url("+Photos_Colors[indx+1].photo+")");
+		
+		
 		curr.addClass("animated fadeOutUp");
 		curr.removeClass("current");
 		var next = curr.next("section.body");
@@ -32,6 +40,12 @@ function previous(){
 	
 	//var indxplus = indx++;
 	if(indx>0){
+		
+		$("div.colors-background").removeClass("blue green red yellow grey");
+		$("div.colors-background").addClass(Photos_Colors[indx-1].color);
+		
+		$("div.photos-background").css("background-image", "url("+Photos_Colors[indx-1].photo+")");
+		
 		curr.addClass("animated fadeOutDown");
 		curr.removeClass("current");
 		var prev = curr.prev("section.body");
