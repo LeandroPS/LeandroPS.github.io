@@ -1,0 +1,137 @@
+@font-face{
+	font-family: "Museo 500";
+	src: url(../fonts/Museo-500.otf);
+}
+
+@font-face{
+	font-family: "Museo 300";
+	src: url(../fonts/Museo-300.otf);
+}
+
+body{
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+header{
+	
+}
+
+	header div.logo{
+		background-color: #000;
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		top: 20px;
+		left: 20px;
+	}
+
+		header div.logo img{
+			width: 100%;
+			height: 100%;
+		}
+
+nav{
+	position: fixed;
+	right: 0px;
+	width: 200px;
+	height: 100%;
+	top: 0px;
+	
+}
+	nav ul.navigation{
+		border-right: 3px solid;
+		text-align: right;
+		margin: 0px 20px 0px 0px;
+		height: 100%;
+		padding: 0px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 30px 0px 70px 0px;
+  		box-sizing: border-box;
+	}
+
+		nav ul.navigation li{
+			list-style: none;
+			margin-right: -7px;
+			line-height: 20px;
+			font-family: helvetica, arial, sans-serif;
+		}
+			
+			nav ul.navigation li::after{
+				content: url(../img/bullet11.png);
+				width: 10px;
+				height: 10px;
+				margin-left: 10px;
+				background-color: transparent;
+			}
+
+			nav ul.navigation li.current{
+				font-weight: bold;
+			}
+
+				nav ul.navigation li.current::after{
+					content: url(../img/bullet11-current.png);
+				}
+
+	nav div.buttons{
+		position: absolute;
+		bottom: 10px;
+		right: 33px;
+	}
+
+		nav div.buttons button{
+			border: 0px solid;
+			background-color: transparent;
+			outline: none;
+			width: 40px;
+			height: 40px;
+			
+		}
+
+			nav div.buttons button:active{
+				color: #9E9E9E;
+			}
+
+section.body{
+	position: absolute;
+	display: none;
+	flex-direction: column;
+	opacity: 0;
+	left: 85px;
+	top: 120px;
+
+}
+
+	section.body.intro{
+		max-width: 700px;
+		opacity: 1;
+
+	}
+
+		section.body:first-child{
+			display: flex;	
+		}
+
+		section.body.intro h1{
+			/*font-family: "Museo 500";*/
+			font-family: Helvetica, sans-serif;
+			font-size: 50pt;
+			margin-bottom: 8px;
+		}
+
+		section.body.intro p{
+			font-family: "Museo 300";
+			margin-top: 8px;
+		}
+
+		section.body.intro img.my-photo{
+			margin-top: 32px;
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			align-self: center;
+			-webkit-align-self: center;
+		}
+			
