@@ -101,6 +101,7 @@ nav{
 			margin-right: -7px;
 			line-height: 20px;
 			font-family: helvetica, arial, sans-serif;
+			color: #424242;
 		}
 			
 			nav ul.navigation li::after{
@@ -113,6 +114,7 @@ nav{
 
 			nav ul.navigation li.current{
 				font-weight: bold;
+				color: black;
 			}
 
 				nav ul.navigation li.current::after{
