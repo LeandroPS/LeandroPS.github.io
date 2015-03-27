@@ -102,6 +102,7 @@ nav{
 			line-height: 20px;
 			font-family: helvetica, arial, sans-serif;
 			color: #424242;
+			cursor: pointer;
 		}
 			
 			nav ul.navigation li::after{

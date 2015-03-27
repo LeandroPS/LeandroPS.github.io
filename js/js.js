@@ -70,6 +70,32 @@ function previous(){
 
 $(function(){
 	
+	$("nav ul.navigation li").click(function(){
+		if(!$(this).hasClass("current")){
+			
+			$("nav ul.navigation li.current").removeClass("current");
+			$(this).addClass("current");
+		
+			curr = $("section.body.current");
+			n = $("section.body."+$(this).attr("data-link"));
+			curr.removeClass("current");
+			curr.addClass("animated fadeOutDown");
+			n.show();
+			n.addClass("animated fadeInDown current");
+
+			$("div.colors-background").removeClass("blue green red yellow grey");
+			$("div.colors-background").addClass(Photos_Colors[n.index()].color);
+
+			$("div.photos-background").css("background-image", "url("+Photos_Colors[n.index()].photo+")");
+
+			setTimeout(function(){
+				curr.removeClass("animated fadeOutDown");
+				n.removeClass("animated fadeInDown");
+				curr.hide();
+			},1000);
+		}
+	});
+	
 	$("div.buttons button.down").click(function(){
 		next();
 	});
