@@ -26,7 +26,7 @@ function next(){
 		}
 		
 		setTimeout(function(){
-			curr.removeClass("animated fadeOutUp");
+			curr.removeClass("animated fadeOutUp current");
 			next.removeClass("animated fadeInUp");
 			curr.hide();
 		},1000);
@@ -69,7 +69,7 @@ function previous(){
 }
 
 $(function(){
-	
+	autosize($("section.body.contact ul.messages li div.msg-from-him textarea"));
 	$("nav ul.navigation li").click(function(){
 		if(!$(this).hasClass("current")){
 			

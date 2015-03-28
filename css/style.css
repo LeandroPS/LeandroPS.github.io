@@ -154,7 +154,6 @@ section.body{
 	section.body.intro{
 		max-width: 700px;
 		opacity: 1;
-
 	}
 
 		section.body:first-child{
@@ -181,4 +180,102 @@ section.body{
 			align-self: center;
 			-webkit-align-self: center;
 		}
+
+section.body.contact{
+	opacity: 1;
+}
+
+	section.body.contact ul.messages{
+		padding: 0px;
+		font-family: helvetica, arial, 'lucida grande', sans-serif;
+	}
+
+		section.body.contact ul.messages li{
+			list-style: none;
+			margin-bottom: 15px;
+		}
+
+			section.body.contact ul.messages li img.photo{
+				width: 75px;
+				height: 75px;
+				border-radius: 50%;
+				float: left;
+			}
+
+			section.body.contact ul.messages li div.msg{
+				display: inline-block;
+				border-radius: 15px;
+				background-color: #0091EA;
+				padding: 15px;
+				max-width: 200px;
+				margin-left: 20px;
+				position: relative;
+				z-index: 2;
+			}
+
+				section.body.contact ul.messages li div.msg div.nib{
+					width: 30px;
+					height: 30px;
+					background-color: inherit;
+					transform: rotate(45deg);
+					position: absolute;
+					left: -8px;
+					z-index: -1;
+					margin-top: 10px;
+
+				}
+
+
+				section.body.contact ul.messages li div.msg-from-me{
+					
+				}
+
+					section.body.contact ul.messages li div.msg-from-me div.nib{
+
+					}
+
+				section.body.contact ul.messages li div.msg-from-him{
+					background-color: #BDBDBD;
+					padding: 10px;
+					margin-left: 30px;
+					max-width: 250px;
+				}
+
+					section.body.contact ul.messages li div.msg-from-him div.nib{
+						background-color: inherit;
+						right: -8px;
+						left: auto;
+					}
+					
+
+					section.body.contact ul.messages li div.msg-from-him textarea, section.body.contact ul.messages li div.msg-from-him input, section.body.contact ul.messages li div.msg-from-him button{
+						width: calc(100% - 6px);
+						background-color: transparent;
+						border: none;
+						border-bottom: 1px solid;
+						border-color: #9E9E9E;
+						outline: none;
+						resize: none;
+						padding: 3px;
+
+						
+					}
+
+					section.body.contact ul.messages li div.msg-from-him textarea{
+
+					}
+
+					section.body.contact ul.messages li div.msg-from-him input{
+						height: 20px;
+						line-height: 20px;
+					}
+
+					section.body.contact ul.messages li div.msg-from-him button{
+						height: 30px;
+						width: 100%;
+						border-bottom: none;
+						cursor: pointer;
+						font-weight: bold;
+						color: #616161;
+					}
 			
