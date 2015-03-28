@@ -106,7 +106,7 @@ nav{
 		}
 			
 			nav ul.navigation li::after{
-				content: url(../img/bullet11.png);
+				content: url(../img/bullet11-current.png);
 				width: 10px;
 				height: 10px;
 				margin-left: 10px;
@@ -119,7 +119,7 @@ nav{
 			}
 
 				nav ul.navigation li.current::after{
-					content: url(../img/bullet11-current.png);
+					content: url(../img/bullet11.png);
 				}
 
 	nav div.buttons{
