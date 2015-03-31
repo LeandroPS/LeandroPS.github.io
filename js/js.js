@@ -77,8 +77,9 @@ $(function(){
 			$(this).addClass("current");
 		
 			curr = $("section.body.current");
-			n = $("section.body."+$(this).attr("data-link"));
 			curr.removeClass("current");
+			n = $("section.body."+$(this).attr("data-link"));
+			
 			curr.addClass("animated fadeOutDown");
 			n.show();
 			n.addClass("animated fadeInDown current");
@@ -102,6 +103,22 @@ $(function(){
 	
 	$("div.buttons button.top").click(function(){
 		previous();
+	});
+	
+	$("form.contact-form").on("submit", function(){
+		var values = {};
+		$.each($(this).serializeArray(), function(i, field) {
+			values[field.name] = field.value;
+		});
+		
+		$("ul.messages li.msg-form").remove();
+		$("ul.messages").append("<li><div class='msg msg-from-him'><div class='nib'></div>"+values.response+"</div></li>");
+		
+		setTimeout(function(){
+			$("ul.messages").append("<li><img class='photo' src='img/photos/1553459.jpeg'><div class='msg'><div class='nib'></div>Thank you for your interest on my work, as I said I will respond to your message as soon as possible, In this sections are some links to where you can reach me around the Web. Hope to see you soon!</div></li>");
+		}, 1000);
+		
+		return false;
 	});
 	
 	$(document).keydown(function(e) {
