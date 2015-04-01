@@ -180,6 +180,67 @@ section.body{
 			-webkit-align-self: center;
 		}
 
+	section.body.edu{
+		max-width: 700px;
+		opacity: 1;
+	}
+		section.body.edu p{
+			padding: 0px 5px 0px 10px;
+			border-left: 1px solid;
+		}
+
+		section.body.edu div.timeline{
+			
+			margin-top: 50px;
+			width: 100%;
+			border-bottom: 2px solid;
+		}
+
+			section.body.edu div.timeline ul{
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				width: 100%;
+				padding: 0px 5px;
+			}
+
+				section.body.edu div.timeline ul li{
+					list-style: none;
+					position: relative;
+				}
+
+					section.body.edu div.timeline ul li::after{
+						content: url(../img/bullet11.png);
+						margin-top: 10px;
+						position: absolute;
+						display: block;
+						align-self: center;
+						left: 50%;
+						margin-left: -5px;
+					}
+
+		section.body.edu div.desc{
+			background-color: red;
+			width: 100%;
+			height: 100px;
+			margin-top: 50px;
+			border-top: 1px solid;
+			position: relative;
+		}
+
+			section.body.edu div.desc div.nib{
+				border: none;
+				border-left: 1px solid;
+				border-top: 1px solid;
+				width: 30px;
+				height: 30px;
+				transform: rotate(45deg);
+				position: absolute;
+				top: -16px;
+				left: 50%;
+  				margin-left: -21px;
+			}
+			
 section.body.contact{
 	opacity: 1;
 }
