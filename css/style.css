@@ -222,10 +222,11 @@ section.body{
 		section.body.edu div.desc{
 			background-color: red;
 			width: 100%;
-			height: 100px;
+			min-height: 100px;
 			margin-top: 50px;
 			border-top: 1px solid;
 			position: relative;
+			font-family: "Museo 300";
 		}
 
 			section.body.edu div.desc div.nib{
@@ -240,6 +241,39 @@ section.body{
 				left: 50%;
   				margin-left: -21px;
 			}
+
+				section.body.edu div.desc div.exp-logo{
+					width: 100px;
+					height: calc(100% - 10px);
+					margin: 5px;
+					border-right: 1px solid;
+					display: inline-block;
+					float: left;
+					overflow: hidden;
+				}
+
+				section.body.edu div.desc h1{
+					font-size: 14pt;
+					font-family: "Museo 500";
+					margin: 5px 5px;
+					
+				}
+
+				section.body.edu div.desc h2{
+					font-size: 13pt;
+					margin: 5px 5px;
+				}
+
+				section.body.edu div.desc h3{
+					font-size: 13pt;
+					margin: 5px 5px;
+				}
+
+				section.body.edu div.desc p{
+					font-size: 12pt;
+					margin: 5px 5px;
+				}
+
 			
 section.body.contact{
 	opacity: 1;

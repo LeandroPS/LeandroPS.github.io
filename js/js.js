@@ -1,5 +1,35 @@
 var Photos_Colors = [{color:"blue", photo: "img/photos/webdevelopment.jpg"}, {color:"green", photo: "img/photos/study.jpg"}, {color:"red", photo: "img/photos/skills.jpg"}, {color:"yellow", photo: "img/photos/projects.jpg"}, {color:"grey", photo: "..."}];
 
+var timeline = [{
+	year: "2011",
+	image: "",
+	title: "Instituto Federal Fluminense",
+	course: "Information Systems",
+	location: "Campos dos Goytacazes, RJ, Brazil",
+	description: ""
+},{
+	year: "2011",
+	image: "",
+	title: "Developing Digital Learning Objects Development in HTML5",
+	course: "Research Project",
+	location: "Campos dos Goytacazes, RJ, Brazil",
+	description: "Researching and Implementing Accessibility Requirements in HTML5 Learning Objects Participating on research events to present the project."
+},{
+	year: "2011",
+	image: "",
+	title: "Instituto Federal Fluminense",
+	course: "Information Systems",
+	location: "Campos dos Goytacazes, RJ, Brazil",
+	description: ""
+},{
+	year: "2011",
+	image: "",
+	title: "Saint Leo University",
+	course: "Information Systems",
+	location: "Saint Leo, FL, USA",
+	description: ""
+}];
+
 function next(){
 	var curr = $("section.body.current");
 	var indx = curr.index();
@@ -104,6 +134,22 @@ $(function(){
 	$("div.buttons button.top").click(function(){
 		previous();
 	});
+	
+	$("div.timeline ul li").click(function(){
+		var year = $(this).text();
+		var pos = $(this).index();
+		
+		$("section.edu div.desc div.nib").removeClass("pos-0 pos-1 pos-2 pos-3").addClass("pos-"+pos);
+		
+		$("section.edu div.desc h1").text(timeline[pos].title);
+		$("section.edu div.desc h2").text(timeline[pos].course);
+		$("section.edu div.desc h3").text(timeline[pos].location);
+		$("section.edu div.desc p").text(timeline[pos].description);
+		
+		
+		
+	});
+	
 	
 	$("form.contact-form").on("submit", function(){
 		var values = {};
