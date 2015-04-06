@@ -188,4 +188,8 @@ $(function(){
 		e.preventDefault(); // prevent the default action (scroll / move caret)
 	});
 	
+	$("div.playground a").click(function(){
+		$(this).addClass("animated rubberBand");
+	});
+	
 });
