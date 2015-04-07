@@ -1,29 +1,29 @@
 var Photos_Colors = [{color:"blue", photo: "img/photos/webdevelopment.jpg"}, {color:"green", photo: "img/photos/study.jpg"}, {color:"red", photo: "img/photos/skills.jpg"}, {color:"yellow", photo: "img/photos/projects.jpg"}, {color:"grey", photo: "..."}];
 
 var timeline = [{
-	year: "2011",
-	image: "",
+	type: "course",
+	image: "img/iff-logo.svg",
 	title: "Instituto Federal Fluminense",
 	course: "Information Systems",
 	location: "Campos dos Goytacazes, RJ, Brazil",
 	description: ""
 },{
-	year: "2011",
-	image: "",
+	type: "research project",
+	image: "img/iff-logo.svg",
 	title: "Developing Digital Learning Objects Development in HTML5",
 	course: "Research Project",
 	location: "Campos dos Goytacazes, RJ, Brazil",
 	description: "Researching and Implementing Accessibility Requirements in HTML5 Learning Objects Participating on research events to present the project."
 },{
-	year: "2011",
+	type: "honor",
 	image: "",
-	title: "Instituto Federal Fluminense",
+	title: "Honored witha Science Without Borders scholarship",
 	course: "Information Systems",
 	location: "Campos dos Goytacazes, RJ, Brazil",
-	description: ""
+	description: "The"
 },{
-	year: "2011",
-	image: "",
+	type: "course",
+	image: "img/slu-logo.png",
 	title: "Saint Leo University",
 	course: "Information Systems",
 	location: "Saint Leo, FL, USA",
@@ -140,7 +140,13 @@ $(function(){
 		var pos = $(this).index();
 		
 		$("section.edu div.desc div.nib").removeClass("pos-0 pos-1 pos-2 pos-3").addClass("pos-"+pos);
+		$("section.edu div.desc h1, section.edu div.desc h2, section.edu div.desc h3, section.edu div.desc p").text("");
 		
+		if(timeline[pos].type == "course" || timeline[pos].type == "research project"){
+			$("section.edu div.desc div.exp-logo").html("<img src='"+timeline[pos].image+"'>");
+		}else{
+			$("section.edu div.desc div.exp-logo").html("<span class=''>teste</span>");
+		}
 		$("section.edu div.desc h1").text(timeline[pos].title);
 		$("section.edu div.desc h2").text(timeline[pos].course);
 		$("section.edu div.desc h3").text(timeline[pos].location);

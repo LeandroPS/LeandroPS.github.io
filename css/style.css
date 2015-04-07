@@ -187,7 +187,8 @@ section.body{
 		max-width: 700px;
 		opacity: 1;
 	}
-		section.body.edu p{
+		section.body.edu>p{
+			font-family: "Museo 300";
 			padding: 0px 5px 0px 10px;
 			border-left: 1px solid;
 		}
@@ -210,6 +211,7 @@ section.body{
 				section.body.edu div.timeline ul li{
 					list-style: none;
 					position: relative;
+					cursor: pointer;
 				}
 
 					section.body.edu div.timeline ul li::after{
@@ -223,7 +225,7 @@ section.body{
 					}
 
 		section.body.edu div.desc{
-			background-color: red;
+			background-color: rgba(255,255,255,0.3);
 			width: 100%;
 			min-height: 100px;
 			margin-top: 50px;
@@ -242,40 +244,76 @@ section.body{
 				position: absolute;
 				top: -16px;
 				left: 50%;
-  				margin-left: -21px;
+  				margin-left: -15px;
+				background-color: inherit;
+				
+				transition: left 1s;
 			}
 
-				section.body.edu div.desc div.exp-logo{
-					width: 100px;
-					height: calc(100% - 10px);
-					margin: 5px;
-					border-right: 1px solid;
-					display: inline-block;
-					float: left;
+				section.body.edu div.desc div.nib.pos-0{
+					left: 12.5%;
+				}
+
+				section.body.edu div.desc div.nib.pos-1{
+					left: 37.5%;
+				}
+
+				section.body.edu div.desc div.nib.pos-2{
+					left: 62.5%;
+				}
+
+				section.body.edu div.desc div.nib.pos-3{
+					left: 87.5%;
+				}
+
+				section.body.edu div.desc div.inner{
 					overflow: hidden;
 				}
 
-				section.body.edu div.desc h1{
-					font-size: 14pt;
-					font-family: "Museo 500";
-					margin: 5px 5px;
-					
-				}
+					section.body.edu div.desc div.exp-logo{
+						width: 100px;
+						height: calc(100% - 10px);
+						margin: 5px;
+						border-right: 1px solid;
+						display: inline-block;
+						float: left;
+						overflow: hidden;
+						position: relative;
+						text-align: center;
+					}
 
-				section.body.edu div.desc h2{
-					font-size: 13pt;
-					margin: 5px 5px;
-				}
+						section.body.edu div.desc div.exp-logo img{
+							max-height: calc(100% - 10px);
+							max-width: calc(100% - 10px);
+							margin: 5px 5px;
+						}
 
-				section.body.edu div.desc h3{
-					font-size: 13pt;
-					margin: 5px 5px;
-				}
+						section.body.edu div.desc div.exp-logo span{
 
-				section.body.edu div.desc p{
-					font-size: 12pt;
-					margin: 5px 5px;
-				}
+						}
+
+					section.body.edu div.desc h1{
+						font-size: 14pt;
+						font-family: "Museo 500";
+						margin: 5px 5px;
+
+					}
+
+					section.body.edu div.desc h2{
+						font-size: 13pt;
+						margin: 5px 5px;
+					}
+
+					section.body.edu div.desc h3{
+						font-size: 13pt;
+						margin: 5px 5px;
+					}
+
+					section.body.edu div.desc p{
+						font-size: 12pt;
+						margin: 5px 5px;
+						margin-bottom: 15px;
+					}
 
 			
 section.body.contact{
@@ -428,6 +466,11 @@ section.body.contact{
 			line-height: 50px;
 			text-align: center;
 			position: absolute;
+			/*
+			-webkit-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+  			-moz-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+  			-o-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+  			animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;*/
 		}
 
 			section.body.contact div.playground a.pos-1{
@@ -438,6 +481,11 @@ section.body.contact{
 				width: 65px;
 				height: 65px;
 				line-height: 65px;
+				
+				-webkit-animation: moveX-1 15s linear 0s infinite alternate, moveY-1 15s linear 0s infinite alternate;
+				-moz-animation: moveX-1 15s linear 0s infinite alternate, moveY-1 15s linear 0s infinite alternate;
+				-o-animation: moveX-1 15s linear 0s infinite alternate, moveY-1 15s linear 0s infinite alternate;
+				animation: moveX-1 15s linear 0s infinite alternate, moveY-1 15s linear 0s infinite alternate;
 			}
 
 			section.body.contact div.playground a.pos-2{
@@ -448,6 +496,11 @@ section.body.contact{
   				width: 70px;
   				height: 70px;
   				line-height: 70px;
+				
+				-webkit-animation: moveX-2 15s linear 3s infinite alternate, moveY-2 15s linear 0s infinite alternate;
+				-moz-animation: moveX-2 15s linear 3s infinite alternate, moveY-2 15s linear 0s infinite alternate;
+				-o-animation: moveX-2 15s linear 3s infinite alternate, moveY-2 15s linear 0s infinite alternate;
+				animation: moveX-2 15s linear 3s infinite alternate, moveY-2 15s linear 0s infinite alternate;
 		  	}
 
 			section.body.contact div.playground a.pos-3{
@@ -458,6 +511,11 @@ section.body.contact{
 				width: 60px;
 				height: 60px;
 				line-height: 60px;
+				
+				-webkit-animation: moveX-3 15s linear 7s infinite alternate, moveY-3 15s linear 0s infinite alternate;
+				-moz-animation: moveX-3 15s linear 7s infinite alternate, moveY-3 15s linear 0s infinite alternate;
+				-o-animation: moveX-3 15s linear 7s infinite alternate, moveY-3 15s linear 0s infinite alternate;
+				animation: moveX-3 15s linear 7s infinite alternate, moveY-3 15s linear 0s infinite alternate;
 		  	}
 
 			section.body.contact div.playground a.pos-4{
@@ -468,6 +526,11 @@ section.body.contact{
 				width: 45px;
 				height: 45px;
 				line-height: 45px;
+				
+				-webkit-animation: moveX-4 15s linear 2s infinite alternate, moveY-4 15s linear 0s infinite alternate;
+				-moz-animation: moveX-4 15s linear 2s infinite alternate, moveY-4 15s linear 0s infinite alternate;
+				-o-animation: moveX-4 15s linear 2s infinite alternate, moveY-4 15s linear 0s infinite alternate;
+				animation: moveX-4 15s linear 2s infinite alternate, moveY-4 15s linear 0s infinite alternate;
 		  	}
 
 			section.body.contact div.playground a.pos-5{
@@ -480,11 +543,21 @@ section.body.contact{
 				width: 55px;
 				height: 55px;
 				line-height: 55px;
+				
+				-webkit-animation: moveX-5 15s linear 4s infinite alternate, moveY-5 15s linear 0s infinite alternate;
+				-moz-animation: moveX-5 15s linear 4s infinite alternate, moveY-5 15s linear 0s infinite alternate;
+				-o-animation: moveX-5 15s linear 4s infinite alternate, moveY-5 15s linear 0s infinite alternate;
+				animation: moveX-5 15s linear 4s infinite alternate, moveY-5 15s linear 0s infinite alternate;
 		  	}
 
 			section.body.contact div.playground a.pos-6{
 				right: 25%;
   				bottom: 8%;
+				
+				-webkit-animation: moveX-6 15s linear 3s infinite alternate, moveY-6 15s linear 0s infinite alternate;
+				-moz-animation: movex-6 15s linear 3s infinite alternate, moveY-6 15s linear 0s infinite alternate;
+				-o-animation: moveX-6 15s linear 3s infinite alternate, moveY-6 15s linear 0s infinite alternate;
+				animation: moveX-6 15s linear 3s infinite alternate, moveY-6 15s linear 0s infinite alternate;
 		  	}
 
 			section.body.contact div.playground a.fb{
@@ -510,4 +583,170 @@ section.body.contact{
 			section.body.contact div.playground a.email{
 				background-color: #7cbb00;
 			}
-			
+
+@-webkit-keyframes moveX-1 {
+  from { left: 5%; } to { left: calc(100% - 65px);}
+}
+@-moz-keyframes moveX-1 {
+  from { left: 5%; } to { left: calc(100% - 65px); }
+}
+@-o-keyframes moveX-1 {
+  from { left: 5%; } to { left: calc(100% - 65px); }
+}
+@keyframes moveX-1 {
+  from { left: 5%; } to { left: calc(100% - 65px); }
+}
+/**/
+@-webkit-keyframes moveX-2 {
+  from { left: 34%; } to { left: calc(100% - 70px); }
+}
+@-moz-keyframes moveX-2 {
+  from { left: 34%; } to { left: calc(100% - 70px); }
+}
+@-o-keyframes moveX-2 {
+  from { left: 34%; } to { left: calc(100% - 70px); }
+}
+@keyframes moveX-2 {
+  from { left: 34%; } to { left: calc(100% - 70px); }
+}
+/**/
+@-webkit-keyframes moveX-3 {
+  from { left: 27%; } to { left: calc(100% - 70px); }
+}
+@-moz-keyframes moveX-3 {
+  from { left: 27%; } to { left: calc(100% - 70px); }
+}
+@-o-keyframes moveX-3 {
+  from { left: 27%; } to { left: calc(100% - 70px); }
+}
+@keyframes moveX-3 {
+  from { left: 27%; } to { left: calc(100% - 70px); }
+}
+/**/
+@-webkit-keyframes moveX-4 {
+  from { right: 30%; } to { right: 0%; }
+}
+@-moz-keyframes moveX-4 {
+  from { right: 30%; } to { right: 0%; }
+}
+@-o-keyframes moveX-4 {
+  from { right: 30%; } to { right: 0%; }
+}
+@keyframes moveX-4 {
+  from { right: 30%; } to { right: 0%; }
+}
+/**/
+@-webkit-keyframes moveX-5 {
+  from { right: 15%; } to { right: 0%; }
+}
+@-moz-keyframes moveX-5 {
+  from { right: 15%; } to { right: 0%; }
+}
+@-o-keyframes moveX-5 {
+  from { right: 15%; } to { right: 0%; }
+}
+@keyframes moveX-5 {
+  from { right: 15%; } to { right: 0%; }
+}
+/**/
+@-webkit-keyframes moveX-6 {
+  from { right: 25%; } to { right: 0%; }
+}
+@-moz-keyframes moveX-6 {
+  from { right: 25%; } to { right: 0%; }
+}
+@-o-keyframes moveX-6 {
+  from { right: 25%; } to { right: 0%; }
+}
+@keyframes moveX-6 {
+  from { right: 25%; } to { right: 0%; }
+}
+/**/
+
+@-webkit-keyframes moveY-1 {
+  from { top: 3%; } to { top: calc(100% - 70px); }
+}
+@-moz-keyframes moveY-1 {
+  from { top: 3%; } to { top: calc(100% - 65px); }
+}
+@-o-keyframes moveY-1 {
+  from { top: 3%; } to { top: calc(100% - 65px); }
+}
+@keyframes moveY-1 {
+  from { top: 3%; } to { top: calc(100% - 65px); }
+}
+
+/**/
+
+@-webkit-keyframes moveY-2 {
+  from { top: 40%; } to { top: calc(100% - 70px); }
+}
+@-moz-keyframes moveY-2 {
+  from { top: 40%; } to { top: calc(100% - 70px); }
+}
+@-o-keyframes moveY-2 {
+  from { top: 40%; } to { top: calc(100% - 70px); }
+}
+@keyframes moveY-2 {
+  from { top: 40%; } to { top: calc(100% - 70px); }
+}
+
+/**/
+
+@-webkit-keyframes moveY-3 {
+  from { bottom: 5%; } to { bottom: calc(100% - 70px); }
+}
+@-moz-keyframes moveY-3 {
+  from { bottom: 5%; } to { bottom: calc(100% - 70px); }
+}
+@-o-keyframes moveY-3 {
+  from { bottom: 5%; } to { bottom: calc(100% - 70px); }
+}
+@keyframes moveY-3 {
+  from { bottom: 5%; } to { bottom: calc(100% - 70px); }
+}
+
+/**/
+
+@-webkit-keyframes moveY-4 {
+  from { rtop: 11%; } to { top: calc(100% - 70px); }
+}
+@-moz-keyframes moveY-4 {
+  from { top: 11%; } to { top: calc(100% - 70px); }
+}
+@-o-keyframes moveY-4 {
+  from { top: 11%; } to { top: calc(100% - 70px); }
+}
+@keyframes moveY-4 {
+  from { top: 11%; } to { top: calc(100% - 70px); }
+}
+
+/**/
+
+@-webkit-keyframes moveY-5 {
+  from { ttop: 45%; } to { top: calc(100% - 70px); }
+}
+@-moz-keyframes moveY-5 {
+  from { top: 45%; } to { top: calc(100% - 70px); }
+}
+@-o-keyframes moveY-5 {
+  from { top: 45%; } to { top: calc(100% - 70px); }
+}
+@keyframes moveY-5 {
+  from { top: 45%; } to { top: calc(100% - 70px); }
+}
+
+/**/
+
+@-webkit-keyframes moveY-6 {
+  from { bottom: 8%; } to { bottom: calc(100% - 70px); }
+}
+@-moz-keyframes moveY-6 {
+  from { bottom: 8%; } to { bottom: calc(100% - 70px); }
+}
+@-o-keyframes moveY-6 {
+  from { bottom: 8%; } to { bottom: calc(100% - 70px); }
+}
+@keyframes moveY-6 {
+  from { bottom: 8%; } to { bottom: calc(100% - 70px); }
+}
