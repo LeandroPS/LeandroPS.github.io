@@ -250,6 +250,13 @@ section.body{
 				transition: left 1s;
 			}
 
+				section.body.edu div.desc span.click{
+					width: 100%;
+					position: absolute;
+					line-height: 100px;
+					text-align: center;
+				}
+
 				section.body.edu div.desc div.nib.pos-0{
 					left: 12.5%;
 				}
@@ -316,6 +323,12 @@ section.body{
 					}
 
 			
+
+	section.body.skills{
+		
+	}
+
+
 section.body.contact{
 	opacity: 1;
 

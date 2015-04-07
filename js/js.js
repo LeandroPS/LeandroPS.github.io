@@ -139,6 +139,7 @@ $(function(){
 		var year = $(this).text();
 		var pos = $(this).index();
 		
+		$("section.edu div.desc span.click").hide();
 		$("section.edu div.desc div.nib").removeClass("pos-0 pos-1 pos-2 pos-3").addClass("pos-"+pos);
 		$("section.edu div.desc h1, section.edu div.desc h2, section.edu div.desc h3, section.edu div.desc p").text("");
 		
