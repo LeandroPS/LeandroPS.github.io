@@ -229,12 +229,14 @@ section.body{
 			width: 100%;
 			min-height: 100px;
 			margin-top: 50px;
+			margin-top: 30px;
 			border-top: 1px solid;
 			position: relative;
 			font-family: "Museo 300";
 		}
 
 			section.body.edu div.desc div.nib{
+				/*
 				border: none;
 				border-left: 1px solid;
 				border-top: 1px solid;
@@ -247,6 +249,21 @@ section.body{
   				margin-left: -15px;
 				background-color: inherit;
 				
+				transition: left 1s;
+				*/
+				
+				border: none;
+				border-left: 15px transparent solid;
+				border-right: 15px transparent solid;
+				border-bottom: 15px solid;
+				width: 0;
+				height: 0;
+				/* transform: rotate(45deg); */
+				position: absolute;
+				top: -15px;
+				left: 50%;
+				margin-left: -15px;
+				/* background-color: inherit; */
 				transition: left 1s;
 			}
 
@@ -296,7 +313,8 @@ section.body{
 						}
 
 						section.body.edu div.desc div.exp-logo span{
-
+							font-size: 60pt;
+  							line-height: 110px;
 						}
 
 					section.body.edu div.desc h1{
@@ -335,7 +353,8 @@ section.body{
 		}
 
 		section.body.skills div.skills-main{
-			display: flex;
+			/*display: flex;*/
+			display: none;
 		}
 
 			section.body.skills div.skills-main div{
@@ -369,8 +388,10 @@ section.body{
 						margin: 3px;
 						border-radius: 8px;
   						padding: 5px;
-						background-color: blue;
+						background-color: #2196F3;
 						float: left;
+						color: #fff;
+						font-family: arial, sans-serif;
 					}
 
 			section.body.skills div.footer div.language{
@@ -384,12 +405,13 @@ section.body{
 
 					section.body.skills div.footer div.language ul li{
 						list-style: none;
-						line-height: 30px;
+						line-height: 20px;
 						margin-bottom: 3px;
+						font-family: arial, sans-serif;
 					}
 
 						section.body.skills div.footer div.language ul li img{
-							height: 30px;
+							height: 20px;
 							margin-right: 5px;
 							float: left;
 						}

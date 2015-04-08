@@ -146,7 +146,7 @@ $(function(){
 		if(timeline[pos].type == "course" || timeline[pos].type == "research project"){
 			$("section.edu div.desc div.exp-logo").html("<img src='"+timeline[pos].image+"'>");
 		}else{
-			$("section.edu div.desc div.exp-logo").html("<span class=''>teste</span>");
+			$("section.edu div.desc div.exp-logo").html("<span class='fa fa-star'></span>");
 		}
 		$("section.edu div.desc h1").text(timeline[pos].title);
 		$("section.edu div.desc h2").text(timeline[pos].course);
