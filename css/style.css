@@ -145,7 +145,7 @@ section.body{
 	position: absolute;
 	display: none;
 	flex-direction: column;
-	opacity: 0;
+	opacity: 1;
 	left: 85px;
 	top: 120px;
 	height: calc(100% - 130px);
@@ -327,6 +327,74 @@ section.body{
 	section.body.skills{
 		
 	}
+
+		section.body.skills p{
+			font-family: "Museo 300";
+			padding: 0px 5px 0px 10px;
+			border-left: 1px solid;
+		}
+
+		section.body.skills div.skills-main{
+			display: flex;
+		}
+
+			section.body.skills div.skills-main div{
+				
+				flex-grow: 1;
+			}
+
+				section.body.skills div.skills-main img{
+					width: 90%;
+					height: auto;
+				}
+
+		section.body.skills div.footer{
+			
+		}
+			section.body.skills div.footer h2{
+				font-family: "Museo 300";
+			}
+
+			section.body.skills div.footer div.others{
+				float: left;
+				width: 80%;
+			}
+
+				section.body.skills div.footer div.others ul{
+					padding: 0px;
+				}
+
+					section.body.skills div.footer div.others ul li{
+						list-style: none;
+						margin: 3px;
+						border-radius: 8px;
+  						padding: 5px;
+						background-color: blue;
+						float: left;
+					}
+
+			section.body.skills div.footer div.language{
+				float: right;
+				width: 20%;
+			}
+
+				section.body.skills div.footer div.language ul{
+					padding: 0px;
+				}
+
+					section.body.skills div.footer div.language ul li{
+						list-style: none;
+						line-height: 30px;
+						margin-bottom: 3px;
+					}
+
+						section.body.skills div.footer div.language ul li img{
+							height: 30px;
+							margin-right: 5px;
+							float: left;
+						}
+			
+		
 
 
 section.body.contact{
