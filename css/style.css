@@ -881,3 +881,18 @@ section.body.contact{
 @keyframes moveY-6 {
   from { bottom: 8%; } to { bottom: calc(100% - 70px); }
 }
+
+
+@media only screen and (max-width: 500px){
+	
+	nav{
+		z-index: 0;
+	}
+	
+	section.body{
+		width: calc(100% - 60px);
+		left: 30px;
+		
+	}
+	
+}
