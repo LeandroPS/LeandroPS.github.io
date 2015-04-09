@@ -13,6 +13,21 @@ body{
 	overflow: hidden;
 }
 
+div.everything{
+	width: 100%;
+  	height: 100%;
+	left: 0px;
+  	position: absolute;
+	transition: left 1s;
+	box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+	div.everything.menu-active{
+		left: -180px;
+		transition: left 1s;
+	}
+
+
 div.photos-background{
 	width: 100%;
 	height: 100%;
@@ -74,6 +89,19 @@ header{
 			width: 100%;
 			height: 100%;
 		}
+
+	header button.nav-menu{
+		
+		width: 100px;
+  		height: 100px;
+  		position: absolute;
+  		top: 20px;
+  		right: 20px;
+		background-color: transparent;
+		border: none;
+		outline: none;
+		cursor: pointer;
+	}
 
 nav{
 	position: fixed;

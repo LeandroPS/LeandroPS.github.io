@@ -135,6 +135,11 @@ $(function(){
 		previous();
 	});
 	
+	$("button.nav-menu").click(function(){
+		$("div.everything").toggleClass("menu-active");
+		$("button.nav-menu span").toggleClass("fa-times fa-bars");
+	});
+	
 	$("div.timeline ul li").click(function(){
 		var year = $(this).text();
 		var pos = $(this).index();
