@@ -13,6 +13,10 @@ body{
 	overflow: hidden;
 }
 
+div.center{
+	text-align: center;
+}
+
 div.everything{
 	width: 100%;
   	height: 100%;
@@ -187,7 +191,7 @@ section.body{
 	}
 
 		section.body:first-child{
-			display: flex;	
+			display: block;	
 		}
 
 		section.body.intro h1{
@@ -381,13 +385,19 @@ section.body{
 		}
 
 		section.body.skills div.skills-main{
-			/*display: flex;*/
-			display: none;
+			display: flex;
+			/*display: none;*/
 		}
 
 			section.body.skills div.skills-main div{
-				
 				flex-grow: 1;
+  				max-width: 150px;
+  				text-align: center;
+  				min-width: 100px;
+				flex-grow: 1;
+				align-items: center;
+				display: flex;
+				flex-wrap: wrap;
 			}
 
 				section.body.skills div.skills-main img{
@@ -444,9 +454,53 @@ section.body{
 							float: left;
 						}
 			
+section.body.proj{
+	
+}
+
+	section.body.proj>p{
 		
+	}
 
+	section.body.proj div.projects{
+		
+	}
 
+		section.body.proj div.projects div{
+			
+		}
+
+	section.body.proj section.project-description{
+		
+	}
+
+		section.body.proj section.project-description section{
+			
+		}
+
+			section.body.proj section.project-description section ul{
+				
+			}
+
+			section.body.proj section.project-description section div.details{
+					
+			}
+
+				section.body.proj section.project-description section div.details h1{
+					
+				}
+
+				section.body.proj section.project-description section div.details span.when{
+					
+				}
+
+				section.body.proj section.project-description section div.details p{
+				
+				}
+
+				section.body.proj section.project-description section div.details a{
+					
+				}
 section.body.contact{
 	opacity: 1;
 
@@ -894,5 +948,21 @@ section.body.contact{
 		left: 30px;
 		
 	}
+	
+		section.intro{
+			
+		}
+	
+		section.edu{
+			
+		}
+	
+		section.skills{
+			
+		}
+	
+			section.skills div.footer>div{
+				width: 100%!important;	
+			}
 	
 }
