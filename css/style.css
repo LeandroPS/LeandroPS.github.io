@@ -459,48 +459,111 @@ section.body.proj{
 }
 
 	section.body.proj>p{
-		
+		font-family: "Museo 300";
+		padding: 0px 5px 0px 10px;
+		border-left: 1px solid;
 	}
 
 	section.body.proj div.projects{
-		
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
 	}
 
 		section.body.proj div.projects div{
+			width: 160px;
+			height: 90px;
+			border-radius: 5px;
+			float:left;
+			
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			
+			cursor: pointer;
+			
 			
 		}
+			
+			section.body.proj div.projects div.chat{
+				background-image: url("../img/projects/chat1.png");
+			}
+
+			section.body.proj div.projects div.tsk{
+				background-image: url("../img/projects/tsk.png");
+			}
+
+			section.body.proj div.projects div.slides{
+				background-image: url("../img/projects/slides.png");
+			}
 
 	section.body.proj section.project-description{
 		
 	}
 
 		section.body.proj section.project-description section{
-			
+			width: calc(100% - 20px);
+			background-color: #BDBDBD;
+			padding: 5px;
+			border-radius: 10px;
+			margin-top: 20px;
+			overflow: hidden;
 		}
 
 			section.body.proj section.project-description section ul{
-				
+				padding: 0px;
+				width: 160px;
+				float: left;
 			}
 
+				section.body.proj section.project-description section ul li{
+					list-style: none;
+					margin: 3px;
+					border-radius: 8px;
+  					padding: 5px;
+					background-color: #2196F3;
+					color: #fff;
+					font-family: arial, sans-serif;
+					display: inline-block;
+
+				}
+
 			section.body.proj section.project-description section div.details{
-					
+				display: block;
+				width: calc(100% - 160px);
+				float: right;
 			}
 
 				section.body.proj section.project-description section div.details h1{
-					
+					font-size: 14pt;
+					font-family: "Museo 500";
+					margin: 5px 5px;
 				}
 
-				section.body.proj section.project-description section div.details span.when{
-					
+				section.body.proj section.project-description section div.details h2{
+					font-family: "Museo 300";
+					font-size: 12pt;
+					font-style: italic;
+					margin: 5px 5px;
 				}
 
 				section.body.proj section.project-description section div.details p{
-				
+					font-family: "Museo 300";
+					font-size: 12pt;
+					margin: 5px 5px;
+					margin-top: 10px;
+					margin-bottom: 25px;
 				}
 
 				section.body.proj section.project-description section div.details a{
-					
+					padding: 5px;
+					border: 2px solid;
+					cursor: pointer;
+					margin-top: 20px;
+					display: inline;
 				}
+
 section.body.contact{
 	opacity: 1;
 
