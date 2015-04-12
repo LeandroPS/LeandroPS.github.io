@@ -455,7 +455,7 @@ section.body{
 						}
 			
 section.body.proj{
-	
+	overflow-x: hidden;
 }
 
 	section.body.proj>p{
@@ -503,19 +503,81 @@ section.body.proj{
 	}
 
 		section.body.proj section.project-description section{
-			width: calc(100% - 20px);
+			width: calc(100% - 130px);
 			background-color: #BDBDBD;
 			padding: 5px;
 			border-radius: 10px;
 			margin-top: 20px;
 			overflow: hidden;
+			position: absolute;
+
 		}
+
+			section.body.proj section.project-description section span.prev{
+				position: absolute;
+  				right: 11px;
+				top: 50%;
+				margin-top: -16px;
+				opacity: 1;
+				transition: opacity 1s;
+			}
+
+			section.body.proj section.project-description section span.next{
+				position: absolute;
+  				left: 11px;
+				top: 50%;
+				margin-top: -16px;
+				opacity: 1;
+				transition: opacity 1s;
+			}
+
+			section.body.proj section.project-description section.prevv{
+				left: calc(-200% - 180px);
+				transition: all 1s;
+			}
+
+			section.body.proj section.project-description section.prev{
+				left: calc(-100% + 170px);
+				transition: all 1s;
+				cursor: pointer;
+			}
+
+			section.body.proj section.project-description section.curr{
+				left: 60px;
+				transition: all 1s;
+			}
+
+				section.body.proj section.project-description section.curr span.prev, section.body.proj section.project-description section.curr span.next{
+					opacity: 0;
+				}
+
+			section.body.proj section.project-description section.next{
+				left: calc(100% - 50px);
+				transition: all 1s;
+				cursor: pointer;
+			}
+
+			section.body.proj section.project-description section.nextt{
+				left: calc(200% - 190px);
+				transition: all 1s;
+			}
 
 			section.body.proj section.project-description section ul{
 				padding: 0px;
 				width: 160px;
 				float: left;
-			}
+			}	
+
+				section.body.proj section.project-description section.prev ul, section.body.proj section.project-description section.next ul{
+
+					transform: translate(0px, -120%);
+				}
+
+				section.body.proj section.project-description section ul.curr{
+					
+					transition: all 1s;
+					transform: translate(0px, 0px);
+				}
 
 				section.body.proj section.project-description section ul li{
 					list-style: none;
@@ -534,6 +596,16 @@ section.body.proj{
 				width: calc(100% - 160px);
 				float: right;
 			}
+
+				section.body.proj section.project-description section.prev div.details, section.body.proj section.project-description section.next div.details{
+					opacity: 0;
+				}
+
+				section.body.proj section.project-description section.curr div.details{
+					
+					opacity: 1;
+					transition: opacity 1s;
+				}
 
 				section.body.proj section.project-description section div.details h1{
 					font-size: 14pt;

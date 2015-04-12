@@ -204,4 +204,28 @@ $(function(){
 		$(this).addClass("animated rubberBand");
 	});
 	
+	$("section.body.proj section.project-description").on("click", "section.prev", function(){
+		var prev = $("section.body.proj section.project-description section.prev");
+		var curr = $("section.body.proj section.project-description section.curr");
+		var next = $("section.body.proj section.project-description section.next");
+		
+		prev.prev().removeClass("prevv").addClass("prev");
+		prev.removeClass("prev").addClass("curr");
+		curr.removeClass("curr").addClass("next");
+		next.removeClass("next").addClass("nextt");
+	});
+	
+	$("section.body.proj section.project-description").on("click", "section.next", function(){
+		var prev = $("section.body.proj section.project-description section.prev");
+		var curr = $("section.body.proj section.project-description section.curr");
+		var next = $("section.body.proj section.project-description section.next");
+		
+
+		prev.removeClass("prev").addClass("prevv");
+		curr.removeClass("curr").addClass("prev");
+		next.removeClass("next").addClass("curr");
+		next.next().removeClass("nextt").addClass("next");
+		
+	});
+	
 });
