@@ -172,7 +172,7 @@ $(function(){
 		$("ul.messages li.msg-form").remove();
 		$("ul.messages").append("<li><div class='msg msg-from-him'><div class='nib'></div>"+values.response+"</div></li>");
 		
-		var m = new mandrill.Mandrill('API_KEY');
+		var m = new mandrill.Mandrill('BmvVdeczdHWr74P0SvEVJg');
 
 		// create a variable for the API call parameters
 		var params = {
