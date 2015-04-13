@@ -171,7 +171,7 @@ $(function(){
 		
 		$("ul.messages li.msg-form").remove();
 		$("ul.messages").append("<li><div class='msg msg-from-him'><div class='nib'></div>"+values.response+"</div></li>");
-		
+		/*
 		var m = new mandrill.Mandrill('BmvVdeczdHWr74P0SvEVJg');
 
 		// create a variable for the API call parameters
@@ -189,8 +189,8 @@ $(function(){
 		}, function(err) {
 			console.log(err);
 		});
-		
-		
+		return false;
+		*/
 		setTimeout(function(){
 			$("ul.messages").append("<li><img class='photo' src='img/photos/1553459.jpeg'><div class='msg'><div class='nib'></div>Thank you for your interest on my work, as I said I will respond to your message as soon as possible, In this sections are some links to where you can reach me around the Web. Hope to see you soon!</div></li>");
 		}, 1000);

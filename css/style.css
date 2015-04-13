@@ -638,7 +638,8 @@ section.body.proj{
 
 				section.body.proj section.project-description section div.details div.img{
 					height: 200px;
-					display: flex;
+					/*display: flex;*/
+					display: none;
 					justify-content: center;
 					flex-direction: column;
 				}
