@@ -594,7 +594,7 @@ section.body.proj{
 			section.body.proj section.project-description section div.details{
 				display: block;
 				width: calc(100% - 160px);
-				float: right;
+				float: left;
 			}
 
 				section.body.proj section.project-description section.prev div.details, section.body.proj section.project-description section.next div.details{
@@ -633,9 +633,33 @@ section.body.proj{
 					border: 2px solid;
 					cursor: pointer;
 					margin-top: 20px;
-					display: inline;
+					display: inline-block;
 				}
 
+				section.body.proj section.project-description section div.details div.img{
+					height: 200px;
+					display: flex;
+					justify-content: center;
+					flex-direction: column;
+				}
+
+					section.body.proj section.project-description section div.details div.img img{
+						max-width: 200px;
+						float: right;
+					}
+/*
+			section.body.proj section.project-description section div.img{
+				float: right;
+				width: 200px;
+				text-align: center;
+				height: 100%;
+			}
+
+				section.body.proj section.project-description section div.img img{
+					max-width: 200px;
+					max-height: 100%;
+				}
+*/
 section.body.contact{
 	opacity: 1;
 

@@ -172,6 +172,25 @@ $(function(){
 		$("ul.messages li.msg-form").remove();
 		$("ul.messages").append("<li><div class='msg msg-from-him'><div class='nib'></div>"+values.response+"</div></li>");
 		
+		var m = new mandrill.Mandrill('API_KEY');
+
+		// create a variable for the API call parameters
+		var params = {
+			"message": {
+				"from_email":"your_email_address",
+				"to": "leandro.pires.souza@outlook.com",
+				"subject": "from contact",
+				"text": "name: "+values.name+"  email: "+values.email+"  text: "+values.response
+			}
+		};
+
+		m(params, function(res) {
+			console.log(res);
+		}, function(err) {
+			console.log(err);
+		});
+		
+		
 		setTimeout(function(){
 			$("ul.messages").append("<li><img class='photo' src='img/photos/1553459.jpeg'><div class='msg'><div class='nib'></div>Thank you for your interest on my work, as I said I will respond to your message as soon as possible, In this sections are some links to where you can reach me around the Web. Hope to see you soon!</div></li>");
 		}, 1000);
