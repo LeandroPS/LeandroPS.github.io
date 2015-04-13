@@ -101,6 +101,8 @@ function previous(){
 $(function(){
 	autosize($("section.body.contact ul.messages li div.msg-from-him textarea"));
 	$("nav ul.navigation li").click(function(){
+		$("div.everything").toggleClass("menu-active");
+		$("button.nav-menu span").toggleClass("fa-times fa-bars");
 		if(!$(this).hasClass("current")){
 			
 			$("nav ul.navigation li.current").removeClass("current");
