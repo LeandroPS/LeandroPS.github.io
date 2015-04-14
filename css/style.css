@@ -482,9 +482,12 @@ section.body.proj{
 			background-repeat: no-repeat;
 			
 			cursor: pointer;
-			
-			
 		}
+
+			section.body.proj div.projects div.selected{
+				border: 2px solid;
+				border-color: red;
+			}
 			
 			section.body.proj div.projects div.chat{
 				background-image: url("../img/projects/chat1.png");
@@ -625,14 +628,13 @@ section.body.proj{
 					font-size: 12pt;
 					margin: 5px 5px;
 					margin-top: 10px;
-					margin-bottom: 25px;
 				}
 
 				section.body.proj section.project-description section div.details a{
 					padding: 5px;
 					border: 2px solid;
 					cursor: pointer;
-					margin-top: 20px;
+					margin-top: 10px;
 					display: inline-block;
 				}
 

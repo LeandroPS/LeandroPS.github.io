@@ -234,6 +234,9 @@ $(function(){
 		prev.removeClass("prev").addClass("curr");
 		curr.removeClass("curr").addClass("next");
 		next.removeClass("next").addClass("nextt");
+		
+		$("section.body.proj div.projects div").removeClass("selected");
+		$("section.body.proj div.projects div:eq("+prev.index()+")").addClass("selected");
 	});
 	
 	$("section.body.proj section.project-description").on("click", "section.next", function(){
@@ -247,6 +250,28 @@ $(function(){
 		next.removeClass("next").addClass("curr");
 		next.next().removeClass("nextt").addClass("next");
 		
+		$("section.body.proj div.projects div").removeClass("selected");
+		$("section.body.proj div.projects div:eq("+next.index()+")").addClass("selected");
+		
+	});
+	
+	$("section.body.proj div.projects div").click(function(){
+		$("section.body.proj div.projects div").removeClass("selected");
+		$(this).addClass("selected");
+		var indx = $(this).index();
+	
+		var curr = $("section.body.proj section.project-description section:eq("+indx+")");
+		var prev = curr.prev();
+		var next = curr.next();
+		var prevv = prev.prev();
+		var nextt = next.next();
+		
+		$("section.body.proj section.project-description section").removeClass("prevv prev curr next nextt");
+		prevv.addClass("prevv");
+		prev.addClass("prev");
+		curr.addClass("curr");
+		next.addClass("next");
+		nextt.addClass("nextt");
 	});
 	
 });
