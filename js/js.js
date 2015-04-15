@@ -1,4 +1,4 @@
-var Photos_Colors = [{color:"blue", photo: "img/photos/webdevelopment.jpg"}, {color:"green", photo: "img/photos/study.jpg"}, {color:"red", photo: "img/photos/brain2.JPG"}, {color:"yellow", photo: "img/photos/projects.jpg"}, {color:"grey", photo: "..."}];
+var Photos_Colors = [{color:"blue", photo: "img/photos/webdevelopment.jpg"}, {color:"green", photo: "img/photos/study.jpg"}, {color:"red", photo: "img/photos/brain2.jpg"}, {color:"yellow", photo: "img/photos/projects.jpg"}, {color:"grey", photo: "..."}];
 
 var timeline = [{
 	type: "course",
