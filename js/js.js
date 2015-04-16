@@ -199,7 +199,7 @@ $(function(){
 		$("ul.messages li.msg-form").remove();
 		$("ul.messages").append("<li><div class='msg msg-from-him'><div class='nib'></div>"+values.response+"</div></li>");
 		
-				$.ajax({
+		$.ajax({
 		  type: "POST",
 		  url: "https://mandrillapp.com/api/1.0/messages/send.json",
 		  data: {
@@ -215,7 +215,7 @@ $(function(){
 				],
 			  'autotext': 'true',
 			  'subject': 'A new contact on your website',
-			  'html': 'Name:'+values.name+'<br/> email: <a href="mailto://'+values.email+'>'+values.email+'</a><p>'+values.response+'</p>'
+			  'html': 'Name: '+values.name+'<br/> email: '+values.email+'<p>'+values.response+'</p>'
 			}
 		  }
 		 }).done(function(response) {
