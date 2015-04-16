@@ -405,6 +405,7 @@ section.body{
 			display: -ms-flexbox;
 			display: -webkit-flex;
 			display: flex;
+			flex-wrap: wrap;
 			/*display: none;*/
 		}
 
@@ -1160,7 +1161,7 @@ section.body.contact{
 		}
 	
 			section.skills div.skills-main{
-				flex-wrap: wrap;	
+				
 			}
 	
 			section.skills div.footer>div{
