@@ -165,6 +165,31 @@ $(function(){
 	});
 	
 	
+	$(".teste").click(function(){
+		$.ajax({
+		  type: "POST",
+		  url: "https://mandrillapp.com/api/1.0/messages/send.json",
+		  data: {
+			'key': 'BmvVdeczdHWr74P0SvEVJg',
+			'message': {
+			  'from_email': 'leandro.pires.souza@outlook.com',
+			  'to': [
+				  {
+					'email': 'leandro.pires.souza@outlook.com',
+					'name': 'RECIPIENT NAME (OPTIONAL)',
+					'type': 'to'
+				  }
+				],
+			  'autotext': 'true',
+			  'subject': 'YOUR SUBJECT HERE!',
+			  'html': 'YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!'
+			}
+		  }
+		 }).done(function(response) {
+		   console.log(response); // if you're into that sorta thing
+		 });
+	});
+	
 	$("form.contact-form").on("submit", function(){
 		var values = {};
 		$.each($(this).serializeArray(), function(i, field) {
@@ -193,6 +218,9 @@ $(function(){
 		});
 		return false;
 		*/
+		
+		
+		
 		setTimeout(function(){
 			$("ul.messages").append("<li><img class='photo' src='img/photos/1553459.jpeg'><div class='msg'><div class='nib'></div>Thank you for your interest on my work, as I said I will respond to your message as soon as possible, In this sections are some links to where you can reach me around the Web. Hope to see you soon!</div></li>");
 		}, 1000);
