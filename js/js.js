@@ -164,7 +164,7 @@ $(function(){
 		
 	});
 	
-	
+	/*
 	$(".teste").click(function(){
 		$.ajax({
 		  type: "POST",
@@ -189,7 +189,7 @@ $(function(){
 		   console.log(response); // if you're into that sorta thing
 		 });
 	});
-	
+	*/
 	$("form.contact-form").on("submit", function(){
 		var values = {};
 		$.each($(this).serializeArray(), function(i, field) {
@@ -198,6 +198,29 @@ $(function(){
 		
 		$("ul.messages li.msg-form").remove();
 		$("ul.messages").append("<li><div class='msg msg-from-him'><div class='nib'></div>"+values.response+"</div></li>");
+		
+				$.ajax({
+		  type: "POST",
+		  url: "https://mandrillapp.com/api/1.0/messages/send.json",
+		  data: {
+			'key': 'BmvVdeczdHWr74P0SvEVJg',
+			'message': {
+			  'from_email': 'leandro.pires.souza@outlook.com',
+			  'to': [
+				  {
+					'email': 'leandro.pires.souza@outlook.com',
+					'name': 'RECIPIENT NAME (OPTIONAL)',
+					'type': 'to'
+				  }
+				],
+			  'autotext': 'true',
+			  'subject': 'A new contact on your website',
+			  'html': 'Name:'+values.name+'<br/> email: <a href="mailto://'+values.email+'>'+values.email+'</a><p>'+values.response+'</p>'
+			}
+		  }
+		 }).done(function(response) {
+		   console.log(response); // if you're into that sorta thing
+		 });
 		/*
 		var m = new mandrill.Mandrill('BmvVdeczdHWr74P0SvEVJg');
 
