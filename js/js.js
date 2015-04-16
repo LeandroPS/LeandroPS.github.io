@@ -192,6 +192,7 @@ $(function(){
 	*/
 	$("form.contact-form").on("submit", function(){
 		var values = {};
+		sent = 0;
 		$.each($(this).serializeArray(), function(i, field) {
 			values[field.name] = field.value;
 		});
@@ -220,6 +221,8 @@ $(function(){
 		  }
 		 }).done(function(response) {
 		   console.log(response); // if you're into that sorta thing
+			sent = 1;
+			$("ul.messages").append("<li><img class='photo' src='img/photos/1553459.jpeg'><div class='msg'><div class='nib'></div>Your message was sent! Thank you for your interest on my work, as I said I will respond to your message as soon as possible, In this sections are some links to where you can reach me around the Web. Hope to see you soon!</div></li>");
 		 });
 		/*
 		var m = new mandrill.Mandrill('BmvVdeczdHWr74P0SvEVJg');
@@ -245,8 +248,10 @@ $(function(){
 		
 		
 		setTimeout(function(){
-			$("ul.messages").append("<li><img class='photo' src='img/photos/1553459.jpeg'><div class='msg'><div class='nib'></div>Thank you for your interest on my work, as I said I will respond to your message as soon as possible, In this sections are some links to where you can reach me around the Web. Hope to see you soon!</div></li>");
-		}, 1000);
+			if(sent == 0){
+				$("ul.messages").append("<li><img class='photo' src='img/photos/1553459.jpeg'><div class='msg'><div class='nib'></div>Ops, it's looks that your message is taking to much to be sent, (I swear is not my fault) could you please check your internet connection? Thank you for your interest on my work anyway, if you don't be notified that your message was sent you still can reach me on <a href='mailto://leandro.pires.souza@outlook.com'>leandro.pires.souza@outlook.com</a>, sorry for this infortuny, once I receive it I will respond to your message as soon as possible, In this sections are some links to where you can reach me around the Web. Hope to see you soon!</div></li>");
+			}
+		}, 4000);
 		
 		return false;
 	});
