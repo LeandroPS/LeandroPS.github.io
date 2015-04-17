@@ -747,7 +747,7 @@ section.body.contact{
 
 
 				section.body.contact ul.messages li div.msg-from-me{
-					
+					  width: calc(100% - 125px);
 				}
 
 					section.body.contact ul.messages li div.msg-from-me div.nib{
@@ -1230,7 +1230,7 @@ section.body.contact{
 }
 
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 600px){
 	
 	nav{
 		z-index: 0;
@@ -1261,5 +1261,19 @@ section.body.contact{
 			section.skills div.footer>div{
 				width: 100%!important;	
 			}
+	
+	section.contact{
+		
+	}
+	
+		section.contact ul.messages {
+			clear: left;
+		}
+	
+		section.contact div.links-hub {
+			border-left: 0px solid!important;
+			float: none;
+			width: 100%!important;
+		}
 	
 }
