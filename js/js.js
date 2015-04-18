@@ -6,28 +6,28 @@ var timeline = [{
 	title: "Instituto Federal Fluminense",
 	course: "Information Systems",
 	location: "Campos dos Goytacazes, RJ, Brazil",
-	description: ""
+	description: "The Instituto Federal Fluminense is the Institute where I started my degree on Information Systems, there I participated of Research Projects and had awesome classes such as Object Oriented Programming, Web Programming and Database Management"
 },{
 	type: "research project",
 	image: "img/iff-logo.svg",
 	title: "Developing Digital Learning Objects Development in HTML5",
 	course: "Research Project",
 	location: "Campos dos Goytacazes, RJ, Brazil",
-	description: "Researching and Implementing Accessibility Requirements in HTML5 Learning Objects Participating on research events to present the project."
+	description: "On this research project I was responsible for developing new Learning objects in HTML5 and I was also responsible for coordinate the transition from the development in Flash to HTML 5"
 },{
 	type: "honor",
 	image: "",
-	title: "Honored witha Science Without Borders scholarship",
+	title: "Honored with a Science Without Borders scholarship",
 	course: "Information Systems",
 	location: "Campos dos Goytacazes, RJ, Brazil",
-	description: "The"
+	description: "The Science Without Borders (or Brazil Scientific Mobility Program is a program that award Brazilian students with a year Scholarship and academic training in one of more than 20 countries that have a partnership with the program, in 2014 I was awarded with this program and I chose the United States to have a scholarship)"
 },{
 	type: "course",
 	image: "img/slu-logo.png",
 	title: "Saint Leo University",
 	course: "Information Systems",
 	location: "Saint Leo, FL, USA",
-	description: ""
+	description: "Saint Leo University is the university where I had my scholarship through the Science Without Borders Program, There I could have classes sucha as Software Engineering, Social Media Marketing, Artificial Inteligence and Network Security"
 }];
 
 function next(){
