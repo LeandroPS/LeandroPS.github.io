@@ -561,6 +561,7 @@ section.body.proj{
 			margin-top: 20px;
 			overflow: hidden;
 			position: absolute;
+			min-height: 212px;
 
 		}
 
