@@ -344,6 +344,7 @@ section.body{
 					section.body.edu div.desc div.exp-logo{
 						width: 100px;
 						height: calc(100% - 10px);
+						height: 74px;
 						margin: 5px;
 						border-right: 1px solid;
 						display: inline-block;
@@ -351,6 +352,7 @@ section.body{
 						overflow: hidden;
 						position: relative;
 						text-align: center;
+						opacity: 0;
 					}
 
 						section.body.edu div.desc div.exp-logo img{
@@ -360,8 +362,8 @@ section.body{
 						}
 
 						section.body.edu div.desc div.exp-logo span{
-							font-size: 60pt;
-  							line-height: 110px;
+							font-size: 50pt;
+  							line-height: 74px;
 						}
 
 					section.body.edu div.desc h1{
@@ -385,6 +387,7 @@ section.body{
 						font-size: 12pt;
 						margin: 5px 5px;
 						margin-bottom: 15px;
+						display: inline-block;
 					}
 
 			
