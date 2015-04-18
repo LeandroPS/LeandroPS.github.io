@@ -393,7 +393,7 @@ section.body{
 			
 
 	section.body.skills{
-		
+		width: calc(100% - 170px);
 	}
 
 		section.body.skills p{
@@ -505,7 +505,7 @@ section.body.proj{
 		-webkit-justify-content: space-around;
 	}
 
-		section.body.proj div.projects div{
+		section.body.proj div.projects>div{
 			width: 160px;
 			height: 90px;
 			border-radius: 5px;
@@ -522,18 +522,32 @@ section.body.proj{
 				border: 2px solid;
 				border-color: red;
 			}
-			
-			section.body.proj div.projects div.chat{
-				background-image: url("../img/projects/chat1.png");
-			}
 
-			section.body.proj div.projects div.tsk{
-				background-image: url("../img/projects/tsk.png");
-			}
+				section.body.proj div.projects div div.image{
+					width: 160px;
+					height: 90px;
+					border-radius: 5px;
 
-			section.body.proj div.projects div.slides{
-				background-image: url("../img/projects/slides.png");
-			}
+					background-size: cover;
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+
+				section.body.proj div.projects div.chat div.image{
+					background-image: url("../img/projects/chat1.png");
+				}
+
+				section.body.proj div.projects div.tsk div.image{
+					background-image: url("../img/projects/tsk.png");
+				}
+
+				section.body.proj div.projects div.slides div.image{
+					background-image: url("../img/projects/slides.png");
+				}
+
+				section.body.proj div.projects div div:not(.image){
+					display: none;
+				}
 
 	section.body.proj section.project-description{
 		
@@ -601,7 +615,7 @@ section.body.proj{
 
 			section.body.proj section.project-description section ul{
 				padding: 0px;
-				width: 160px;
+				width: 150px;
 				float: left;
 			}	
 
@@ -670,6 +684,10 @@ section.body.proj{
 					cursor: pointer;
 					margin-top: 10px;
 					display: inline-block;
+					color: #000;
+					text-decoration: none;
+					margin-left: 5px;
+					font-family: arial, sans-serif;
 				}
 
 				section.body.proj section.project-description section div.details div.img{
@@ -1234,7 +1252,6 @@ section.body.contact{
   from { bottom: 8%; } to { bottom: calc(100% - 70px); }
 }
 
-
 @media only screen and (max-width: 800px){
 	
 	nav{
@@ -1242,7 +1259,7 @@ section.body.contact{
 	}
 	
 	section.body{
-		width: calc(100% - 60px);
+		width: calc(100% - 60px)!important;
 		left: 30px;
 		
 	}
@@ -1266,6 +1283,122 @@ section.body.contact{
 			section.skills div.footer>div{
 				width: 100%!important;	
 			}
+	
+	section.proj{
+		
+	}
+	
+		section.proj div.projects{
+			display: block!important;
+			width:
+		}
+	
+			section.proj div.projects>div{
+				background-color: #BDBDBD;
+				width: 100%!important;
+				height: auto!important;
+				min-height: 200px!important;
+				float: none!important;
+				clear: both;
+				margin-top: 10px;
+				min-height: 200px!important;
+				position: relative;
+			}
+	
+				section.proj div.projects div.selected{
+					border: none!important;	
+				}
+
+				section.proj div.projects div div.image{
+					height: 200px!important;
+					width: 100%!important;
+				}
+	
+				section.proj div.projects div div.clickable{
+					width: 100%;
+					height: 200px;
+					display: block!important;
+					z-index: 5;
+					position: absolute;
+
+					top: 0px;
+
+				}
+	
+				section.proj div.projects div div.click-again{
+					width: 100%;
+					height: 200px;
+					background-color: #000;
+					opacity: 0.3;
+					border-radius: 5px;
+					z-index: 6;
+					position: absolute;
+
+					top: 0px;
+				}
+	
+				section.proj div.projects div div.details{
+					padding-bottom: 10px;
+				}
+	
+	
+					section.body.proj div.projects div div.details ul{
+						padding: 0px 5px;
+						margin: 5px 0px;
+
+					}
+	
+	
+						section.body.proj div.projects div div.details ul li{
+							list-style: none;
+							margin: 3px;
+							border-radius: 8px;
+							padding: 5px;
+							background-color: #2196F3;
+							color: #fff;
+							font-family: arial, sans-serif;
+							display: inline-block;
+
+						}
+	
+	
+					section.body.proj div.projects div div.details h1{
+						font-size: 14pt;
+						font-family: "Museo 500";
+						margin: 5px 5px;
+					}
+
+					section.body.proj div.projects div div.details h2{
+						font-family: "Museo 300";
+						font-size: 12pt;
+						font-style: italic;
+						margin: 5px 5px;
+					}
+
+					section.body.proj div.projects div div.details p{
+						font-family: "Museo 300";
+						font-size: 12pt;
+						margin: 5px 5px;
+						margin-top: 10px;
+					}
+
+					section.body.proj div.projects div div.details a{
+						padding: 5px;
+						border: 2px solid;
+						cursor: pointer;
+						margin-top: 10px;
+						display: inline-block;
+						color: #000;
+						text-decoration: none;
+						margin-left: 5px;
+						font-family: arial, sans-serif;
+					}
+	
+	
+		section.proj section.project-description{
+			display: none;
+		}
+	
 	
 	section.contact{
 		

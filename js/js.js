@@ -331,4 +331,11 @@ $(function(){
 		nextt.addClass("nextt");
 	});
 	
+	$("section.proj div.projects div div.clickable").click(function(){
+		var det = $(this).siblings(".details");
+		det.slideDown();
+		var click_again = $(this).siblings(".click-again");
+		click_again.show();
+	});
+	
 });
