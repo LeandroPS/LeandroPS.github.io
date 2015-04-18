@@ -481,6 +481,7 @@ section.body{
 			
 section.body.proj{
 	overflow-x: hidden;
+	width: calc(100% - 170px);
 }
 
 	section.body.proj>p{
@@ -695,6 +696,7 @@ section.body.proj{
 */
 section.body.contact{
 	opacity: 1;
+	width: calc(100% - 170px);
 
 }
 
@@ -1230,7 +1232,7 @@ section.body.contact{
 }
 
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 800px){
 	
 	nav{
 		z-index: 0;
