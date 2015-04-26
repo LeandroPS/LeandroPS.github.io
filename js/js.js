@@ -38,8 +38,10 @@ function next(){
 		$("div.colors-background").removeClass("blue green red yellow grey");
 		$("div.colors-background").addClass(Photos_Colors[indx+1].color);
 
-		$("div.photos-background").css("background-image", "url("+Photos_Colors[indx+1].photo+")");
-		
+		//$("div.photos-background").css("background-image", "url("+Photos_Colors[indx+1].photo+")");
+		n = indx+1;
+		$("div.photos-background img").removeClass("current");
+		$("div.photos-background img:eq("+n+")").addClass("current");
 		
 		curr.addClass("animated fadeOutUp");
 		curr.removeClass("current");
@@ -74,7 +76,11 @@ function previous(){
 		$("div.colors-background").removeClass("blue green red yellow grey");
 		$("div.colors-background").addClass(Photos_Colors[indx-1].color);
 		
-		$("div.photos-background").css("background-image", "url("+Photos_Colors[indx-1].photo+")");
+		//$("div.photos-background").css("background-image", "url("+Photos_Colors[indx-1].photo+")");
+		
+		n = indx-1;
+		$("div.photos-background img").removeClass("current");
+		$("div.photos-background img:eq("+n+")").addClass("current");
 		
 		curr.addClass("animated fadeOutDown");
 		curr.removeClass("current");
@@ -119,7 +125,12 @@ $(function(){
 			$("div.colors-background").removeClass("blue green red yellow grey");
 			$("div.colors-background").addClass(Photos_Colors[n.index()].color);
 
-			$("div.photos-background").css("background-image", "url("+Photos_Colors[n.index()].photo+")");
+			//$("div.photos-background").css("background-image", "url("+Photos_Colors[n.index()].photo+")");
+			
+			//n = indx+1;
+			$("div.photos-background img").removeClass("current");
+			$("div.photos-background img:eq("+$(this).index()+")").addClass("current");
+			
 
 			setTimeout(function(){
 				curr.removeClass("animated fadeOutDown");
