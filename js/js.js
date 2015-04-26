@@ -268,25 +268,31 @@ $(function(){
 		return false;
 	});
 	
-	$(document).keydown(function(e) {
-		switch(e.which) {
-			case 37: // left
-			break;
+	$("").keydown(function(e){
+		e.preventDefault();
+	});
+	
+	$(document).keyup(function(e) {
+		if(!$("textarea").is(":focus")){
+			switch(e.which) {
+				case 37: // left
+				break;
 
-			case 38: // up
-				previous();
-			break;
+				case 38: // up
+					previous();
+				break;
 
-			case 39: // right
-			break;
+				case 39: // right
+				break;
 
-			case 40: // down
-				next();
-			break;
+				case 40: // down
+					next();
+				break;
 
-			default: return; // exit this handler for other keys
+				default: return; // exit this handler for other keys
+			}
 		}
-		e.preventDefault(); // prevent the default action (scroll / move caret)
+		//e.preventDefault(); // prevent the default action (scroll / move caret)
 	});
 	
 	$("div.playground a").click(function(){
